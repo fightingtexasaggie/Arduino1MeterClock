@@ -18,5 +18,8 @@ void loop() {
   int timeSecond = now.second();
   float timeDecimal = timeHour+timeMinute/60+timeSecond/3600;
   analogWrite(meterPin, map(timeDecimal, 0, 24, 0, 255));
-  delay(1000);
+  delay(5000);
+  float timeDecimalMin = timeMinute+timeSecond/60;
+  analogWrite(meterPin, map(timeDecimalMin, 0, 60, 0, 255));
+  delay(5000);
 }
