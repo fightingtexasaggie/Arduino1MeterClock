@@ -36,7 +36,7 @@ void loop() {
   now = RTC.now();
   timeMinute = now.minute();
   timeSecond = now.second();
-  float timeDecimalMin = timeMinute+(float)timeSecond/60.0);
+  float timeDecimalMin = timeMinute+(float)timeSecond/60.0;
   analogWrite(meterPin, map(timeDecimalMin, 0, 60, 0, 255));
   delay(5000);
 }
